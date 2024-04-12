@@ -1,5 +1,6 @@
 package com.plcoding.weatherapp.di
 
+import com.plcoding.weatherapp.data.repository.WeatherRepositoryImpl
 import com.plcoding.weatherapp.domain.repository.WeatherRepository
 import dagger.Binds
 import dagger.Module
@@ -13,5 +14,5 @@ abstract class RepositoryModule {
 
     @Binds
     @Singleton
-    abstract fun bindWeatherRepository(weatherRepository: WeatherRepository): WeatherRepository
+    abstract fun bindWeatherRepository(weatherRepositoryImpl: WeatherRepositoryImpl): WeatherRepository
 }
